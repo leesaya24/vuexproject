@@ -16,7 +16,7 @@ const actions = {
         commit('setUserInfo', users)
 
         if(users.length > 0) {
-            commit('selectUser', 0)
+            commit('selectUser', 0) // 디폴트 유저선택
         }
     },
     selectUser: ({ commit }, index) => { // 유저리스트에서 유저선택
