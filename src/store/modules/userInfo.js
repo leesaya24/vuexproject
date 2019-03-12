@@ -7,7 +7,7 @@ const state = {
 
 const getters = {
     allUserInfo: state => state.userInfos,
-    selectedUser: state => state.selectedUser,
+    selectedUser: state => state.selectedUser
 }
 
 const actions = {

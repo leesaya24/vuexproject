@@ -1,10 +1,11 @@
 <template>
   <v-container grid-list-xl>
+     <h1> @/views/Resource.vue </h1>
     <v-layout row wrap>
-      <v-flex xs6>
+      <v-flex xs12>
         <ResourceInfo/>
       </v-flex>
-      <v-flex xs6>
+      <v-flex xs12>
         <ResourceDetail/>
       </v-flex>
     </v-layout>

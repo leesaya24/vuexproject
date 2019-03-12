@@ -26,6 +26,11 @@
             <v-list-tile-title>유저+리소스</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile router :to="{name : 'test'}">
+          <v-list-tile-content>
+            <v-list-tile-title>테스트</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar color="indigo" dark fixed app>

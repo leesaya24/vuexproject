@@ -1,14 +1,18 @@
 <template>
   <v-layout>
     <v-flex xs12>
-      <h1> 유저상세 정보 </h1>
+      <h1> @/components/UserDetail.vue</h1>
       
       <v-card>
          <img :src="selectedUser.avatar">  
-         First Name : {{selectedUser.first_name}}
-         Last Name : {{selectedUser.last_name}}
-        
-      </v-card>
+          <v-card-title>
+            <h2>{{selectedUser.first_name}} {{selectedUser.last_name}} </h2>
+          </v-card-title>
+          <v-card-text>
+            <h5> ImageURL : {{selectedUser.avatar}} </h5>
+          </v-card-text>
+        </v-card>
+
     </v-flex>
   </v-layout>
 </template>

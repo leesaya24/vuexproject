@@ -1,18 +1,21 @@
 <template>
   <div>
-    <h1>리소스 리스트</h1>
-    <v-list>
-      <v-list-tile
-        v-for="(info, index) in allResource"
-        :key="index"
-        avatar
-        @click="onListTileItemClick(index)"
-      >
-        <v-list-tile-content>
-          <v-list-tile-title>{{info.name}}</v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
-    </v-list>
+    <h1> @/components/ResourceInfo.vue </h1>  
+    <v-data-table
+      :headers="headers"
+      :items="allResource"
+      hide-actions
+      class="elevation-1"
+    >
+      <template slot="items" slot-scope="props">
+        <tr @click="select(props.index)">
+          <td>{{ props.item.id }}</td>
+          <td>{{ props.item.name }}</td>
+          <td>{{ props.item.year }}</td>
+          <td>{{ props.item.color }}</td>
+        </tr>
+      </template>
+    </v-data-table>
   </div>
 </template>
 
@@ -20,7 +23,15 @@
 import { mapGetters, mapActions } from 'vuex';
 export default {
   data() {
-    return {};
+    return {
+      headers: [
+          {text: `ID`,value: `id`},
+          {text: `Name`,value: `name`},
+          {text: `Year`,value: `year`},
+          {text: `Color`,value: `color`},
+
+        ]
+    };
   },
 
   computed: {
@@ -30,14 +41,13 @@ export default {
   methods: {
     ...mapActions('resourceInfo', ['getResourceInfos', 'selectResource']),
 
-    onListTileItemClick(index){
+    select(index){
       this.selectResource(index)
     }
   },
 
   created() {
-    this.getResourceInfos()
+    //this.getResourceInfos()
   }
 }
 </script>
-

@@ -1,5 +1,6 @@
 <template>
   <v-container grid-list-xl>
+     <h1> @/views/Some.vue </h1>
     <v-layout row wrap>
       <v-flex xs6>
         <UserInfo/>

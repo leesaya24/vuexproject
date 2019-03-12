@@ -1,9 +1,9 @@
 <template>
   <v-layout>
     <v-flex xs12>
-      <h1> @/components/ResourceDetailInfo.vue</h1>
+      <h1> ResourceDetailInfo Component </h1>
       
-    <v-card
+      <v-card
       :color="selectedResource.color"
       >
          <v-card-title>

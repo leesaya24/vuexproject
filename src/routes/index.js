@@ -27,6 +27,11 @@ export default new Router({
       name: 'sum',
       component: () => import('@/views/Sum.vue')
     },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('@/views/Test.vue')
+    }
     
   ]
 })
